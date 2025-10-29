@@ -33,7 +33,7 @@ async function sendInput() {
 
   let data;
   try {
-    const response = await fetch("http://127.0.0.1:5000/generate", {
+    const response = await fetch("https://neurotrio.onrender.com/generate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt: inputValue }),
@@ -72,7 +72,7 @@ async function getAIPredictions(filterFromGemini) {
   try {
     setLoadingProgress(65, "Calling AI service…");
 
-    const response = await fetch("http://127.0.0.1:5000/predict", {
+    const response = await fetch("https://neurotrio.onrender.com/predict", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(filterFromGemini)
@@ -549,4 +549,5 @@ window.onload = () => {
 
 
 };
+
 
