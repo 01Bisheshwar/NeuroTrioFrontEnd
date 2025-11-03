@@ -74,6 +74,12 @@ document.getElementById("quality").value = jsonResult["Quality Rating"];
 await getAIPredictions(filterStr);
 } else {
 setLoadingProgress(55, "Finding best candidates…");
+document.getElementById("tool").value = jsonResult.Tool;
+document.getElementById("module").value = jsonResult.Module;
+document.getElementById("task").value = jsonResult.Task;
+document.getElementById("time_frame").value = jsonResult["Time Frame"];
+document.getElementById("quality").value = jsonResult["Quality Rating"];
+
 await getAIPredictions(filterStr); // or jsonResult, depending on your backend
 // getAIPredictions closes the modal when it finishes successfully
 }
@@ -672,6 +678,7 @@ modal.style.display = "none";
 
 
 };
+
 
 
 
