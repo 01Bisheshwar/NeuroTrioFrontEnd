@@ -33,7 +33,7 @@ openLoadingModal("Understanding your requirement…", 10);
 
 let data;
 try {
-const response = await fetch("http://neurotrio.onrender.com/generate", {
+const response = await fetch("https://neurotrio.onrender.com/generate", {
 method: "POST",
 headers: { "Content-Type": "application/json" },
 body: JSON.stringify({ prompt: inputValue }),
@@ -91,7 +91,7 @@ async function getAIPredictions(filterFromGemini) {
 try {
 setLoadingProgress(65, "Calling AI service…");
 
-const response = await fetch("http://neurotrio.onrender.com/predict", {
+const response = await fetch("https://neurotrio.onrender.com/predict", {
 method: "POST",
 headers: { "Content-Type": "application/json" },
 body: JSON.stringify(filterFromGemini)
@@ -672,4 +672,5 @@ modal.style.display = "none";
 
 
 };
+
 
