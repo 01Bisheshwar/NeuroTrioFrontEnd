@@ -54,7 +54,7 @@ const jsonResult = JSON.parse(data.output);
 var isAlternate = jsonResult["isAlternative"];
 delete jsonResult.isAlternative;
 var filterStr = JSON.stringify(jsonResult);
-if (isAlternate) {
+if (isAlternate=="true") {
 setLoadingProgress(55, "Showing alternatives…");
 
 const confirmed = await openAlternateModal(jsonResult.Tool);
@@ -672,5 +672,6 @@ modal.style.display = "none";
 
 
 };
+
 
 
